@@ -23,4 +23,4 @@ In order to run the transaction example and the experiments, first you need to i
 ## License
 
 * Hyperledger indy-sdk and indy-node are licensed under the Apache License 2.0 - see the [LICENSE](https://github.com/hyperledger/indy-node/blob/master/LICENSE) file for details
-This project is licensed under the Apache License 2.0 - see the [LICENSE.md](LICENSE.md) file for details
+* This project is licensed under the Apache License 2.0 - see the [LICENSE.md](LICENSE.md) file for details
