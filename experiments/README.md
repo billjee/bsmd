@@ -1,11 +1,11 @@
-## Instructions for running messages experiment
+## Instructions for running messages experiment (experiment 1 in papper)
 1. Create a [virtual environment](https://docs.python-guide.org/dev/virtualenvs/)
 2. In terminal type: 
 ```
 pyton3 nodeExp.py
 ```
 
-## Instructions for running nodes experiment
+## Instructions for running nodes experiment (experiment 2 in papper)
 1. Create a [virtual environment](https://docs.python-guide.org/dev/virtualenvs/)
 2. For running the experiment with two nodes type in terminal: 
 ```
