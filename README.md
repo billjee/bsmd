@@ -7,7 +7,7 @@ Blockchain framework for Smart Mobility Data-market (BSMD) is designed to solve 
 For building the experiment of the BSMD we use the [Hyperledger indy-sdk](https://github.com/hyperledger/indy-sdk).
 
 ## Installation
-In order to run the transaction example and the experiments, first you need to install a test network:
+In order to run the code first you need to install a test network:
 
 1. To install network in different computers follow [this guide](https://github.com/hyperledger/indy-node/blob/master/docs/start-nodes.md#create-a-network-and-start-nodes) (hard)
 2. To install network in a single computer follow [this guide](https://github.com/hyperledger/indy-sdk#how-to-start-local-nodes-pool-with-docker) (easy)
