@@ -119,7 +119,7 @@ async def run():
 
 
     ################################################
-    ################################################
+    # Step 1
     ################################################
     # Create Identifications.
     # In this step the goverment create a credential that other nodes will use for verifying his identity
@@ -204,7 +204,10 @@ async def run():
     logger.info("\"government\" -> Authdecrypt \"Trusted-Node\" Credential Request from University")
     University_government_verkey, authdecrypted_trusted_node_cred_request_json, _ = \
         await auth_decrypt(government_wallet, government_University_key, authcrypted_trusted_node_cred_request)
-
+    ################################################
+    # Step 2
+    ################################################
+    # The goverment issue a credential to the university
     logger.info("\"government\" -> Create \"Trusted-Node\" Credential for University")
     trusted_node_cred_values = json.dumps({
         "name": {"raw": "University", "encoded": "1139481716457488690172217916278103335"},
@@ -240,10 +243,19 @@ async def run():
     logger.info("------------------------------")
 
     ########
+    ################################################
+    # Step 3
+    ################################################
+    # The university make a connection request to the User
     _, User_University_key, University_User_did, University_User_key, \
     User_University_connection_response = await onboarding(pool_handle, "User", User_wallet, User_did, "University",
                                                        University_wallet, University_wallet_config, University_wallet_credentials)
 
+    ########
+    ################################################
+    # Step 3
+    ################################################
+    # The user create a sharing application. This university fill this application with the credentials issued by the government
 
     logger.info("==============================")
     logger.info("== Apply for sharing information with User - Trusted-node proving  ==")
@@ -297,7 +309,11 @@ async def run():
         await anoncreds.prover_search_credentials_for_proof_req(University_wallet,
                                                                 authdecrypted_apply_sharing_proof_request_json, None)
 
-############
+    ########
+    ################################################
+    # Step 4
+    ################################################
+    # The University fill the application using his credential and send the aplication to the node
     logger.info("\"University\" get his credentials from the blockchan")
     cred_for_attr1 = await get_credential_for_referent(search_for_apply_sharing_proof_request, 'attr1_referent')
     cred_for_attr2 = await get_credential_for_referent(search_for_apply_sharing_proof_request, 'attr2_referent')
@@ -352,6 +368,12 @@ async def run():
                                 University_apply_sharing_proof_json.encode('utf-8'))
 
     logger.info("\"University\" -> Send authcrypted \"Sharing-Application-Basic\" Proof to User")
+    
+    ########
+    ################################################
+    # Step 5
+    ################################################
+    # The User check the credentials of university and compare the information with the registry of the ledger
 
     logger.info("\"User\" -> Authdecrypted \"Sharing-Application-Basic\" Proof from University")
     _, authdecrypted_University_apply_sharing_proof_json, authdecrypted_University_apply_sharing_proof = \
@@ -397,44 +419,6 @@ async def run():
 
     logger.info("Getting started -> done")
 
-
-
-async def smartContract(infoSolicitation, my_wallet, my_vk_transaction, their_vk_transaction):
-    data = json.loads(infoSolicitation.decode('utf-8'))
-    logger.info("Smart Contract")
-    if (data["name"] == 1 or data["gender"] == 1 or data["address"] == 1):
-
-        await prepMessage(my_wallet, my_vk_transaction, their_vk_transaction, "Reject transaction")
-
-    if (data["name"] == 0 and data["gender"] == 0 and data["address"] == 0):
-        wantedInfo = json.dumps({
-            "mode": "Bus",
-            "travelTime": "25",
-            "GPS": "sequence of points"})
-        await prepMessage(my_wallet, my_vk_transaction, their_vk_transaction, wantedInfo)
-
-# Step 6 code goes here, replacing the read() stub.
-async def read(wallet_handle, my_vk):
-    with open('encrypted.dat', 'rb') as f:
-        encrypted = f.read()
-    # decrypted = await crypto.auth_decrypt(wallet_handle, my_vk, encrypted)
-    decrypted = await crypto.anon_decrypt(wallet_handle, my_vk, encrypted)
-    print(decrypted)
-    return decrypted
-
-async def prepMessage(wallet_handle, my_vk, their_vk, msg):
-    with open('plaintext.txt', 'w') as f:
-        f.write(msg)
-    with open('plaintext.txt', 'rb') as f:
-        msg = f.read()
-    # encrypted = await crypto.anon_crypt(wallet_handle, my_vk, their_vk, msg)
-    encrypted = await crypto.anon_crypt(their_vk, msg)
-    # print('encrypted = %s' % repr(encrypted))
-    with open('encrypted.dat', 'wb') as f:
-        f.write(bytes(encrypted))
-    print('prepping %s' % msg)
-
-# (pool_handle, "Sovrin Steward", steward_wallet, steward_did, "Government", None,government_wallet_config, government_wallet_credentials)
 async def onboarding(pool_handle, _from, from_wallet, from_did, to, to_wallet: Optional[str], to_wallet_config: str,
                      to_wallet_credentials: str):
     logger.info("\"{}\" -> Create and store in Wallet \"{} {}\" DID".format(_from, _from, to))
