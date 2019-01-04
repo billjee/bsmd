@@ -12,7 +12,7 @@ In order to run the code first you need to install a test network:
 1. To install network on a physical network follow [this guide](https://github.com/hyperledger/indy-node/blob/master/docs/start-nodes.md#create-a-network-and-start-nodes) (hard)
 2. To install network in local machine follow [this guide](https://github.com/hyperledger/indy-sdk#how-to-start-local-nodes-pool-with-docker) (easy)
 
-In the [examples](/examples) folder samples of Cybersecurity and privacy impacts and transactions. In the [experiments](/experiments) folder is the code for running the simulation in a local machine and a physical network. 
+In the [examples](/examples) folder are samples of Cybersecurity and privacy impacts and transactions. In the [experiments](/experiments) folder is the code for running the simulation in a local machine and a physical network. 
 
 ## Built With
 
