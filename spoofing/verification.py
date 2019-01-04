@@ -324,18 +324,18 @@ async def run():
     logger.info("\"University\" node tries to spoof credential outside the blockchain")
     logger.info("This credential will result in an error since the credential was not obtained from the blockchain")
     logger.info("To make the program run comment from line 311 to line 322")
-    # cred_for_attr1 = json.dumps({
-    #     'referent': cred_for_attr1['referent'],
-    #     'cred_rev_id': None,
-    #     'attrs': {
-    #         'verify': '1',
-    #         'address': '55 Hamilton, Toronto, Ontario',
-    #         'name': 'University'
-    #     },
-    #     'rev_reg_id': None,
-    #     'schema_id': cred_for_attr1['schema_id'],
-    #     'cred_def_id': cred_for_attr1['cred_def_id']
-    # })
+    cred_for_attr1 = json.dumps({
+        'referent': cred_for_attr1['referent'],
+        'cred_rev_id': None,
+        'attrs': {
+            'verify': '1',
+            'address': '55 Hamilton, Toronto, Ontario',
+            'name': 'University'
+        },
+        'rev_reg_id': None,
+        'schema_id': cred_for_attr1['schema_id'],
+        'cred_def_id': cred_for_attr1['cred_def_id']
+    })
 
 
     logger.info("Since the credential was not spoofed the University node successfully verifies his identity")
