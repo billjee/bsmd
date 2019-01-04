@@ -9,8 +9,8 @@ For building the experiment of the BSMD we use the [Hyperledger indy-sdk](https:
 ## Installation
 In order to run the code first you need to install a test network:
 
-1. To install network in different computers follow [this guide](https://github.com/hyperledger/indy-node/blob/master/docs/start-nodes.md#create-a-network-and-start-nodes) (hard)
-2. To install network in a single computer follow [this guide](https://github.com/hyperledger/indy-sdk#how-to-start-local-nodes-pool-with-docker) (easy)
+1. To install network on a physical network follow [this guide](https://github.com/hyperledger/indy-node/blob/master/docs/start-nodes.md#create-a-network-and-start-nodes) (hard)
+2. To install network in local machine follow [this guide](https://github.com/hyperledger/indy-sdk#how-to-start-local-nodes-pool-with-docker) (easy)
 
 Go to [transaction](/transaction) to see a transaction example or go to [experiments](/experiments) to run some stress test. 
 
