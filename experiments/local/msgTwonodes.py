@@ -41,8 +41,8 @@ async def run(nA, nB, messages, number, NodeA_did, NodeA_key, NodeB_did, NodeB_k
     Node_B_wallet_credentials = json.dumps({"key": keyB})
     NodeB_wallet = await wallet.open_wallet(mode_B_wallet_config, Node_B_wallet_credentials)
 
-    # (NodeA_did, NodeA_key) = await did.create_and_store_my_did(NodeA_wallet, "{}")
-    # (NodeB_did, NodeB_key) = await did.create_and_store_my_did(NodeB_wallet, "{}")
+    (NodeA_did, NodeA_key) = await did.create_and_store_my_did(NodeA_wallet, "{}")
+    (NodeB_did, NodeB_key) = await did.create_and_store_my_did(NodeB_wallet, "{}")
 
     # Count time elapsed since write operation in the ledger
     start = time.time()
