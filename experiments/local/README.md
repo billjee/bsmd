@@ -5,11 +5,11 @@ Install Indy using this [guide](https://github.com/hyperledger/indy-sdk#installi
 ```
 pyton3 createpopulation.py
 ```
-2. Create wallets for nodes and create a the pool of the blockchain. Run
+2. Create wallets for nodes. Run
 ```
 pyton3 createWalletsANDpool.py
 ```
-3. Install an Indy blockchain of six nodes. This blockchain will run in three cores of the machine
+3. Install a six node Indy blockchain. This blockchain will run in three cores of the computer
    1. Clone the [indy-sdk](https://github.com/hyperledger/indy-sdk)
    2. In the cloned indy-sdk replace the file `indy-pool.dockerfile` contained in the “ci” folder with the [indy-pool.dockerfile](indy-pool.dockerfile)` file of this project.
    3. In terminal run
