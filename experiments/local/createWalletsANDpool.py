@@ -23,7 +23,7 @@ async def run():
             pass
     pool_handle = await pool.open_pool_ledger(pool_name, None)
 
-    for i in range(1, 500):
+    for i in range(1, 1000):
         node_A = str(i) + "_wallet"
         node_A_wallet_config = json.dumps({"id": node_A})
         keyA = str(i) + "_wallet_key"
