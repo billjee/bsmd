@@ -9,7 +9,7 @@
 This two step verification make hard for malicious node to spoof his identity, since one verification is performed by an external node. The only change a Node has to spoof his identity is to tamper the blockchain which, for now, is nearly impossible.
 
 ## Run test
-1. Create a [virtual environment](https://docs.python-guide.org/dev/virtualenvs/)
+1. Setup your indy development virtual machine. Follow this [guide](https://github.com/hyperledger/indy-sdk/blob/master/doc/how-tos/prerequisites.md) 
 2. In terminal type: 
 ```
 pyton3 verification.py
