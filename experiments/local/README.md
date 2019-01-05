@@ -23,4 +23,4 @@ pyton3 createWalletsANDpool.py
     ```
 5. The output of the simulation is in the file *results.log*
 
-For running the simulation with a different population size modify the line 14 of file [createpopulation](createpopulation.py) and repeat steps 1, 2 and 4. 
+For running the simulation with a different population size modify the line 14 of file [createpopulation](createpopulation.py) and repeat steps 1 and 4. 
