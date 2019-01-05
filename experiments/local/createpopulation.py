@@ -10,7 +10,8 @@ logging.basicConfig(filename=LOG_FILENAME,level=logging.INFO)
 mean1 = 9360
 sd1 = 2350
 
-persons = 10
+# Change "persons" to create differen sample of population
+persons = 100
 providers = 6
 
 messages = np.random.normal(mean1, sd1, persons)
