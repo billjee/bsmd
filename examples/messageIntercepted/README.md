@@ -11,6 +11,7 @@ The example follows the next steps
   4. The node A read the mobility data of the Node B
 
 ## Run test
+1. Setup your indy development virtual machine. Follow this [guide](https://github.com/hyperledger/indy-sdk/blob/master/doc/how-tos/prerequisites.md) 
 1. In terminal run 
 ```
 pyton3 msgIntercepted.py
