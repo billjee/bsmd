@@ -1,5 +1,6 @@
 # Reference
 López, David, and Farooq, Bilal (2020) A multi-layered blockchain framework for smart mobility data-markets. Transportation Research Part C: Emerging Technologies 111: 588-615. https://arxiv.org/abs/1906.06435
+
 López, David, and Farooq, Bilal (2018) A blockchain framework for smart mobility.	In the proceedings of IEEE International Smart Cities Conference 2018. https://arxiv.org/abs/1809.05785
 
 # Blockchain for smart mobility
