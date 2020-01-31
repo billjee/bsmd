@@ -1,5 +1,6 @@
 # Reference
-David López, Bilal Farooq (2018) A blockchain framework for smart mobility.	In the proceedings of IEEE International Smart Cities Conference 2018. https://arxiv.org/abs/1809.05785
+López, David, and Farooq, Bilal (2020) A multi-layered blockchain framework for smart mobility data-markets. Transportation Research Part C: Emerging Technologies 111: 588-615. https://arxiv.org/abs/1906.06435
+López, David, and Farooq, Bilal (2018) A blockchain framework for smart mobility.	In the proceedings of IEEE International Smart Cities Conference 2018. https://arxiv.org/abs/1809.05785
 
 # Blockchain for smart mobility
 Blockchain framework for Smart Mobility Data-market (BSMD) is designed to solve the privacy, security and management issues related to the sharing of passively as well as actively solicited large-scale data. Data from the individuals, governments, universities and companies are distributed on the network and stored in a decentralized manner, the data transactions are recorded and must have the authorization of the owners.
